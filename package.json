@@ -1,0 +1,31 @@
+{
+  "name": "pipelinemedic",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "node --env-file-if-exists=.env scripts/start.js",
+    "test": "node --test tests/*.test.js",
+    "test:smoke": "node --env-file-if-exists=.env scripts/smoke.js",
+    "test:live": "node --env-file-if-exists=.env --test tests/live/*.test.js",
+    "test:report": "node scripts/test-report.js",
+    "demo:video": "node scripts/make-demo-video.js",
+    "mcp": "node --env-file-if-exists=.env mcp/server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.1",
+    "lucide-react": "^0.577.0",
+    "next": "16.3.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "ffmpeg-static": "^5.3.0"
+  }
+}

@@ -1,0 +1,27 @@
+services:
+  pipelinemedic:
+    build:
+      context: .
+      target: runner
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      CLOUD_BASE_URL: ${CLOUD_BASE_URL:-}
+      CLOUD_API_KEY: ${CLOUD_API_KEY:-}
+      CLOUD_MODEL: ${CLOUD_MODEL:-}
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-}
+      PIPELINEMEDIC_ACCESS_TOKEN: ${PIPELINEMEDIC_ACCESS_TOKEN:-}
+      PIPELINEMEDIC_ORIGIN: ${PIPELINEMEDIC_ORIGIN:-}
+      PIPELINEMEDIC_DB_PATH: /app/data/pipelinemedic.db
+    volumes:
+      - pipelinemedic-data:/app/data
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+volumes:
+  pipelinemedic-data:

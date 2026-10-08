@@ -1,0 +1,11 @@
+node_modules
+.next
+.git
+.env
+.env.*
+!.env.example
+.devpost-pack
+devpost/learner-profile.md
+tests
+scripts
+*.log
