@@ -1,6 +1,7 @@
 ---
 doc: scope
-status: draft
+status: approved
+approved_on: 2026-10-08
 ---
 
 # PipelineMedic

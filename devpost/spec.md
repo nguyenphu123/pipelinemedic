@@ -1,6 +1,7 @@
 ---
 doc: spec
-status: implementation-authorized
+status: approved
+approved_on: 2026-10-08
 ---
 
 # PipelineMedic — Technical Spec
@@ -8,7 +9,7 @@ status: implementation-authorized
 ## How This Works, In Plain Language
 A Next.js server stores a provider-neutral pipeline catalog and normalized run summaries in SQLite. Run ingestion redacts common credential patterns before persisting failed-stage logs. Built-in rules or optional cloud/local AI turn a selected run into structured advice, and evidence references are checked against stored lines. The web UI and Node MCP server share these services. No commands are executed.
 
-This blueprint implements the user's repeated build request and established choices. Routine implementation details below are agent decisions; no separate technical-plan approval is claimed.
+This blueprint implements the user's repeated build request and established choices. Routine implementation details below are agent decisions. The learner reviewed and approved scope and spec on October 8, 2026, after implementation; this is a final review, not a claim of pre-build approval.
 
 ## The Core Journey Through the System
 Implements two connected journeys: provider adapter/webhook → run ingestion → dashboard → failure inbox → stored-run advisor; and ad hoc input → local redacted preview → `/api/diagnose` → selected provider → validated evidence and next actions.

@@ -9,3 +9,5 @@ npm run demo:video
 ```
 
 The video contains no credentials or private production logs. It makes synthetic data and human-controlled advice visible in the product UI.
+
+The illustrated user guide is available at `output/pdf/pipelinemedic-interaction-guide.pdf`. To regenerate it locally, install Python's `reportlab` package and run `python scripts/make-interaction-guide.py` after capturing the corresponding screenshots into `demo/frames/`. Those intermediate screenshots remain ignored by Git.

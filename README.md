@@ -17,6 +17,8 @@ Rules mode works without an account, model or outbound request. It is pattern-ba
 
 ## What works
 
+For a guided first visit, download the [illustrated interaction guide](output/pdf/pipelinemedic-interaction-guide.pdf). It covers local setup, failed-run investigation, configuration revisions, the log sandbox, optional AI and MCP.
+
 - Catalog GitLab CI, Jenkins, GitHub Actions, Azure Pipelines, CircleCI and custom pipeline configurations.
 - Create, edit, upload, download, enable, pause and remove locally managed pipeline records.
 - Keep configuration revision metadata in SQLite and run provider-specific structural checks before saving.
@@ -198,6 +200,6 @@ Model output is schema-checked, and citations must identify existing nonempty li
 
 Created for Build With AI: Basics using the official Devpost Learn Skill Pack. Canonical planning files are `devpost/scope.md`, `devpost/prd.md`, `devpost/spec.md`, with progress in `devpost/checklist.md`. Personal learner notes and credentials are ignored by Git. Standard dependencies and the official skill pack are the pre-existing tooling; sample logs are synthetic.
 
-The skill pack was used for onboarding, scope, product/technical planning and verification structure. The user delegated implementation after shaping scope and appearance; separate plan approvals and hands-on learner checks are not fabricated. A local captioned demonstration video is in [`demo/pipelinemedic-demo.mp4`](demo/pipelinemedic-demo.mp4). Final learner review, live AI validation, public repository publication and Devpost upload remain submission work.
+The skill pack was used for onboarding, scope, product/technical planning and verification structure. The user delegated implementation after shaping scope and appearance. Scope and spec received final learner approval on October 8, 2026, after implementation; pre-build sign-offs and hands-on checks are not fabricated. A captioned demonstration video is in [`demo/pipelinemedic-demo.mp4`](demo/pipelinemedic-demo.mp4). The public repository is published; live AI validation and Devpost upload remain submission work.
 
 License: MIT.
